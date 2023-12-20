@@ -2,8 +2,15 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.FragmentSpike" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">@color/primary_color_dark</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+
     </style>
 
     <style name="Theme.FragmentSpike" parent="Base.Theme.FragmentSpike" />
+    <style name="ToolbarTheme" parent="@style/Base.Theme.FragmentSpike">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
 </resources>
