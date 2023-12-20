@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/containerFragment"
         android:name="com.gte.fragmentspike.views.fragments.ContainerFragment"
-        android:label="fragment_container"
-        tools:layout="@layout/fragment_container" >
+        android:label="Home"
+        tools:layout="@layout/fragment_container">
         <action
             android:id="@+id/action_containerFragment_to_secondFragment"
             app:destination="@id/secondFragment"
@@ -21,8 +21,8 @@
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.gte.fragmentspike.views.fragments.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" >
+        android:label="Second"
+        tools:layout="@layout/fragment_second">
         <action
             android:id="@+id/action_secondFragment_to_thirdAcceptArgsFragment"
             app:destination="@id/thirdAcceptArgsFragment"
@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/thirdAcceptArgsFragment"
         android:name="com.gte.fragmentspike.views.fragments.ThirdAcceptArgsFragment"
-        android:label="ThirdAcceptArgsFragment" >
+        android:label="Third">
         <argument
             android:name="address"
             app:argType="string" />
@@ -47,4 +47,8 @@
             app:popUpTo="@id/containerFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.gte.fragmentspike.views.fragments.SettingFragment"
+        android:label="Settings" />
 </navigation>
