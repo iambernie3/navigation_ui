@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 
 import com.gte.fragmentspike.R;
 import com.gte.fragmentspike.databinding.ThirdAcceptArgsFragmentBinding;
@@ -27,5 +29,9 @@ public class ThirdAcceptArgsFragment extends Fragment {
         ThirdAcceptArgsFragmentArgs args = ThirdAcceptArgsFragmentArgs.fromBundle(getArguments());
         binding.tvAddress.setText(args.getAddress());
         binding.tvName.setText(args.getUserName());
+        binding.btnClose.setOnClickListener( v -> {
+            NavDirections action = ThirdAcceptArgsFragmentDirections.actionThirdAcceptArgsFragmentToContainerFragment();
+            Navigation.findNavController(view).navigate(action);
+        });
     }
 }

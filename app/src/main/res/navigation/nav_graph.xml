@@ -41,5 +41,10 @@
         <argument
             android:name="userName"
             app:argType="string" />
+        <action
+            android:id="@+id/action_thirdAcceptArgsFragment_to_containerFragment"
+            app:destination="@id/containerFragment"
+            app:popUpTo="@id/containerFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
