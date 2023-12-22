@@ -3,6 +3,8 @@ package com.gte.fragmentspike;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDirections;
+import androidx.navigation.NavGraph;
 import androidx.navigation.NavHostController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.termsMenu) {
+            NavDirections action = NavGraphDirections.actionGlobalTermsFragment();
+        }
         return NavigationUI.onNavDestinationSelected(item,navController) || super.onOptionsItemSelected(item);
     }
 }

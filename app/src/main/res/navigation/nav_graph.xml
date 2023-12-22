@@ -51,4 +51,16 @@
         android:id="@+id/settingFragment"
         android:name="com.gte.fragmentspike.views.fragments.SettingFragment"
         android:label="Settings" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.gte.fragmentspike.views.fragments.TermsFragment"
+        android:label="Terms &amp; Condition"
+        tools:layout="@layout/fragment_terms" />
+    <action
+        android:id="@+id/action_global_termsFragment"
+        app:destination="@id/termsFragment"
+        app:enterAnim="@anim/slide_in_top"
+        app:exitAnim="@anim/slide_out_bottom"
+        app:popEnterAnim="@anim/slide_in_bottom"
+        app:popExitAnim="@anim/slide_out_top" />
 </navigation>
